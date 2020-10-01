@@ -1,0 +1,44 @@
+div#h1 {
+	position:absolute;
+	top: 0px;
+	left: 200px;
+	color: white;
+	background: black;
+}
+div[label]{margin0;}
+.tabs {
+    position: relative;
+	/* Относительное позиционирование */
+   }
+   .tab, .tab-title {
+    display: inline-block;	/* Выстраиваем по горизонтали */
+	
+	
+   }
+   .tab input[type="radio"] { display: none;}
+   .tab-title {
+	
+    background: white; /* Цвет фона */
+    
+   }
+   .tab-content {
+	
+    position: absolute; /* Абсолютное позиционирование */
+    background:white;
+    padding: 0px; /* Поля вокруг текста */
+    left: 0; /* Размещаем у левого края */
+    width: calc(100% - 20px); /* Ширина содержимого */
+    display: none; /* Прячем вкладку */
+	
+   }
+   .tab :checked + .tab-title {
+    position: relative; /* Относительное позиционирование */
+    background: black; /* Цвет фона */
+	color: white;
+    top: 1px; /* Сдвигаем вниз */
+    z-index: 1; /* Отображаем поверх содержимого */
+   }
+   .tab :checked ~ .tab-content {
+	
+    display: block; /* Показываем активную вкладку */
+   }
